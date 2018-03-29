@@ -11,13 +11,12 @@ let shuffleArray = function (array) {
 cards = shuffleArray(cards);
 
 
-let cardsList = $('.board div:not(.score, .reset)');
+let cardsList = $('.card');
 
 
 for (let i = 0; i < cardsList.length; i++) {
-    cardsList[i].addEventListener("click", function () {
+    $(cardsList[i]).on("click", function () {
         revealCard(i);
-        console.log("hi");
     });
 }
 
@@ -79,6 +78,11 @@ function hide2Cards(nr1, nr2) {
         $('.board').html('<h1>Congratulations <br/> You Win!!!<br/> Done in ' + turnCounter +
             ' turns</h1> <br/> <button class="reset" onclick="location.reload()">Do you want to try again?</button>');
     }
+	
+	let button = $('<button>Do You Want To Try Again ?</button>').addClass('reset');
+	$(button).on('click', function(){
+		location.reload();
+	});
 
     lock = false;
 }
