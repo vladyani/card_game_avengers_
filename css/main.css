@@ -3,6 +3,8 @@ body {
     background-image: url(../img/tlo1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
     background-position: center;
     color: #cccccc;
     font-family: 'Ubuntu', sans-serif;
@@ -71,8 +73,6 @@ p {
     transition: all .3s ease-in-out;
 }
 
-/* style dla pojedynczej karty */
-
 .card {
     width: 125px;
     height: 125px;
@@ -121,8 +121,6 @@ p {
 .reset:focus {
     border: none;
 }
-
-/* copyrights footer */
 
 footer .copyrights {
     font-size: 30px;
